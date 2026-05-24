@@ -53,6 +53,32 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 
 ---
 
+## 📸 Screenshots
+
+### 1. Show Tables
+![Show Tables](screenshots/01_show_tables.png)
+
+
+### 2. Wafers Structure
+![Wafers Structure](screenshots/02_wafers_structure.png)
+
+### 3. Defects Structure
+![Defects Structure](screenshots/03_defects_structure.png)
+
+### 4. Yield Analysis
+![Yield Analysis](screenshots/04_yield_analysis.png)
+
+### 5. Defect Analysis
+![Defect Analysis](screenshots/05_defect_analysis.png)
+
+### 6. Equipment Health
+![Equipment Health](screenshots/06_equipment_health.png)
+
+### 7. Stored Procedure Output
+![Stored Procedure](screenshots/07_stored_procedure_report.png)
+
+---
+
 ## 📊 Key SQL Analytics Implemented
 
 | # | Analysis |
