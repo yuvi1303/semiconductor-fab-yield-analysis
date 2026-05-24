@@ -2,135 +2,122 @@
 "Semiconductor Wafer Fab Yield Analysis System using MySQL"
 # 🔬 Semiconductor Fab Yield Analysis System
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)
-![Level](https://img.shields.io/badge/Level-Beginner%20Learning-yellow)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Level](https://img.shields.io/badge/Level-Student%20Project-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-I didn't want to build a basic "student database" or "library management" project like everyone else. So I challenged myself to build something that actually relates to my ECE domain — a **Semiconductor Wafer Fab Yield Analysis System**.
+Instead of building a basic SQL beginner project, I wanted to simulate something closer to real-world semiconductor manufacturing systems — where databases track wafer production, yield performance, defects, and equipment health.
 
-Is it perfect? Probably not.  
-Did I learn a ton building it? **Absolutely yes.**
+This project is my attempt to model that environment using **MySQL + advanced SQL concepts**.
 
 ---
 
 ## 💡 Why This Project?
 
-As an ECE student I kept asking myself —
-> *"What does SQL look like in the real semiconductor industry?"*
+Semiconductor companies like **Intel, TSMC, and Qualcomm** rely heavily on data systems to track:
 
-Companies like **Intel, Qualcomm, TSMC** track wafer yield, defects, and process steps using databases exactly like this. So I tried to simulate that — at a beginner level.
+- Wafer yield performance  
+- Defect density and classification  
+- Equipment reliability  
+- Process stability  
 
----
-
-## 🧠 What I Learned Building This
-
-This was my first real SQL project. Here's what I picked up:
-
-- ✅ How to design a database from scratch (normalization)
-- ✅ Writing JOINs across multiple tables
-- ✅ Using Window Functions like RANK() and LAG()
-- ✅ What CTEs are and how to use them
-- ✅ Writing my first Stored Procedures
-- ✅ Understanding FOREIGN KEY relationships
-- ✅ How real fab concepts like yield%, defect density, and SPC map to SQL queries
+This project simulates that workflow at a simplified level using relational database design and analytics.
 
 ---
 
-## 🗄️ What the Database Contains
+## 🧠 What I Learned
 
-10 tables that simulate a wafer fab plant:
+Through this project, I learned:
 
-```
-semiconductor_fab
-├── technology_nodes    → Process nodes like 7nm, 14nm, 28nm
-├── products            → Chips like Mobile SoC, GPU, MCU, IoT
-├── engineers           → Fab engineers and departments
-├── equipment           → Machines like ASML scanners, Lam etchers
-├── process_steps       → Steps like Lithography, Etch, CMP
-├── defect_types        → Defect types like Particle, Bridge, Open
-├── lots                → Production lots being processed
-├── wafers              → Individual wafers with yield %
-├── defects             → Defect records with location data
-└── wafer_measurements  → Measurements like CD, Overlay, Thickness
-```
+- Database design and normalization (3NF thinking)
+- Complex JOIN operations across multiple tables
+- Window Functions (RANK, LAG, PARTITION BY)
+- Common Table Expressions (CTEs)
+- Stored Procedures for automation
+- Real-world interpretation of yield %, defects, and SPC concepts
+- How manufacturing data translates into business insights
 
-### ERD Diagram:
+---
+
+## 🏭 Database Overview
+
+This system simulates a semiconductor fab with 10 interconnected tables:
+
+semiconductor_fab ├── technology_nodes ├── products ├── engineers ├── equipment ├── process_steps ├── defect_types ├── lots ├── wafers ├── defects └── wafer_measurements
+
+---
+
+### 📊 ER Diagram
 ![ERD Diagram](erd_diagram.png)
 
 ---
 
-## 📊 Queries I Wrote (Still Learning!)
+## 📊 Key SQL Analytics Implemented
 
-| # | What the Query Does |
-|---|---|
-| 1 | Lot yield summary — how each lot performed |
-| 2 | Which equipment causes the most defects |
-| 3 | Find measurements that failed specification |
-| 4 | Rank wafers by yield using Window Functions |
-| 5 | Engineer performance report |
-| 6 | Rolling yield trend using CTE + LAG() |
-| 7 | Defect Pareto — which defects kill yield most |
-| 8 | SPC analysis — process stability using STDDEV |
-| 9 | Cost of poor yield — financial impact |
-| 10 | Equipment health — machines needing maintenance |
+| # | Analysis |
+|--|----------|
+| 1 | Yield vs Target Performance Analysis |
+| 2 | Equipment-wise Defect Contribution |
+| 3 | Out-of-Spec Measurement Detection |
+| 4 | Wafer Ranking using Window Functions |
+| 5 | Engineer Performance Evaluation |
+| 6 | Rolling Yield Trend (CTE + LAG) |
+| 7 | Defect Pareto Analysis (80/20 rule) |
+| 8 | Process Stability (SPC using STDDEV) |
+| 9 | Cost of Poor Yield Estimation |
+| 10 | Equipment Health Dashboard |
 
 ---
 
-## 🔧 Stored Procedures I Built
-
-```sql
--- Get full report for any lot
+## 🕸 Stored Procedure
+'''sql
 CALL GetLotReport('LOT-2024-001');
-
--- Alert when yield drops below a threshold
 CALL YieldExcursionAlert(60.00);
-
--- Check defect history of any machine
 CALL EquipmentDefectReport('LAM-ETH02');
-```
+
+These procedure generate:
+   -Lot-level procudition report
+   -Yield risk alert
+   -Equipment defect summaries
+
+   ---
+   
+## 🚀 How to Run This Project
+   1. Install MySQL 8.0 and MySQL Workbench
+   2. Open MySQL Workbench
+   3. Import database:
+       -Server → Data Import
+       -Select Dump20260524.sql
+       -Click Start Import
+   4. Run:
+      USE semiconductor_fab;
+   5. Execute queries from the SQL file
 
 ---
 
-## 🚀 How to Run This
-
-1. Install **MySQL 8.0** and **MySQL Workbench**
-2. Open MySQL Workbench
-3. Go to **Server → Data Import**
-4. Select the **Dump20260524.sql** file
-5. Click **Start Import**
-6. Open a new query tab and run:
-```sql
-USE semiconductor_fab;
--- Now run any query you like!
-```
-
----
-
-## 📁 Files in This Repo
-
-```
+## 📁 Project Structure
 semiconductor-fab-yield-analysis/
-├── Dump20260524.sql     → Full database (just import and run!)
-├── README.md            → You're reading this!
-└── erd_diagram.png      → Visual diagram of all tables
-```
+├── Dump20260524.sql     → Full database dump
+├── README.md            → Project documentation
+└── erd_diagram.png      → Database schema diagram
 
 ---
 
-## 🙏 Honest Note
+## 🙏 Note
 
-I'm still a beginner. I built this project to push myself beyond basic SQL and to connect my ECE background with data skills. There's definitely room to improve and I'm still learning every day.
-
-If you're a recruiter or senior engineer reading this — I'd love any feedback! 😊
-
----
-
-## 📬 Let's Connect!
-
-**Nallavelli Yuvraj Yadav**  
-🔗 [LinkedIn](https://www.linkedin.com/in/nallavelliyuvraj)
+This is my first structured SQL project built to go beyond basic exercises and simulate a real semiconductor manufacturing environment.
+I'm continuously improving my skills in databases, data engineering, and system design.
+Feedback is always welcome.
 
 ---
 
-*First SQL project | Built with curiosity and a lot of Stack Overflow 😄*
+## 📬 Connect With Me
+
+Nallavelli Yuvraj Yadav
+🔗 LinkedIn: https://www.linkedin.com/in/nallavelliyuvraj⁠
+
+Built with curiosity, persistence, and real-world engineering inspiration.
+
+
+
