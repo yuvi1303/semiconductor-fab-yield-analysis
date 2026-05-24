@@ -58,7 +58,6 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 ### 1. Show Tables
 ![Show Tables](screenshots/01_show_tables.jpg)
 
-
 ### 2. Wafers Structure
 ![Wafers Structure](screenshots/02_wafers_structure.jpg)
 
@@ -76,6 +75,7 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 
 ### 7. Stored Procedure Output
 ![Stored Procedure](screenshots/07_stored_procedure_report.jpg)
+
 
 ---
 
