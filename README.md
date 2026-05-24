@@ -62,7 +62,7 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 ![Wafers Structure](02_wafers_structure.jpg)
 
 ### 3. Defects Structure
-![Defects Structure](03_defects_structure.jpg)
+![Defects Structure](03_defect_structure.jpg)
 
 ### 4. Yield Analysis
 ![Yield Analysis](04_yield_analysis.jpg)
