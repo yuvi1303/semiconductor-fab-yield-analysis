@@ -56,26 +56,26 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 ## 📸 Screenshots
 
 ### 1. Show Tables
-![Show Tables](screenshots/01_show_tables.png)
+![Show Tables](screenshots/01_show_tables.jpg)
 
 
 ### 2. Wafers Structure
-![Wafers Structure](screenshots/02_wafers_structure.png)
+![Wafers Structure](screenshots/02_wafers_structure.jpg)
 
 ### 3. Defects Structure
-![Defects Structure](screenshots/03_defects_structure.png)
+![Defects Structure](screenshots/03_defects_structure.jpg)
 
 ### 4. Yield Analysis
-![Yield Analysis](screenshots/04_yield_analysis.png)
+![Yield Analysis](screenshots/04_yield_analysis.jpg)
 
 ### 5. Defect Analysis
-![Defect Analysis](screenshots/05_defect_analysis.png)
+![Defect Analysis](screenshots/05_defect_analysis.jpg)
 
 ### 6. Equipment Health
-![Equipment Health](screenshots/06_equipment_health.png)
+![Equipment Health](screenshots/06_equipment_health.jpg)
 
 ### 7. Stored Procedure Output
-![Stored Procedure](screenshots/07_stored_procedure_report.png)
+![Stored Procedure](screenshots/07_stored_procedure_report.jpg)
 
 ---
 
