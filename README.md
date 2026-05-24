@@ -74,7 +74,7 @@ semiconductor_fab ├── technology_nodes ├── products ├── engine
 ![Equipment Health](screenshots/06_equipment_health.jpg)
 
 ### 7. Stored Procedure Output
-![Stored Procedure](screenshots/07_stored_procedure_report.jpg)
+![Stored Procedure](07_stored_procedure_report.jpg)
 
 
 ---
