@@ -7,10 +7,6 @@
 
 ---
 
-## 👋 About Me & This Project
-
-Hi! I'm **Nallavelli Yuvraj Yadav**, an ECE student who just started learning SQL.
-
 I didn't want to build a basic "student database" or "library management" project like everyone else. So I challenged myself to build something that actually relates to my ECE domain — a **Semiconductor Wafer Fab Yield Analysis System**.
 
 Is it perfect? Probably not.  
